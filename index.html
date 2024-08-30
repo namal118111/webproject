@@ -24,16 +24,22 @@
                       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                           <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><span class="hero-title-highlight">Home</span></a>
+                            <a class="nav-link active" aria-current="page" href="#"><span class="hero-title-highlight">HOME</span></a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Top Destinations</a>
+                            <a class="nav-link" href="#">ABOUT</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Testimonials</a>
+                            <a class="nav-link" href="#SERVICES">SERVICES</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="#testimonials">TESTIMONIALS</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#team">PORTFOLIO</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="#contact-us">CONTACT US</a>
                           </li>
                         </ul>
                       </div>
@@ -77,7 +83,7 @@
     <section class="container mt-5 ">
     
         
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" id="SERVICES">
 
            
                 <h3 class="text-center text-purple">
@@ -132,7 +138,7 @@
     
 
     <section class="team-leads">
-    <div class="team-section">
+    <div class="team-section" id="team">
       <h3><span class="hero-title-highlight">OUR TEAM LEADS</span></h3>
       <div class="para"><p>Teamwork is the ability to work together toward a common vision. The ability to direct individuals accompanents towards organixezal objectives. It is the fuel that allows common peoples to attain uncommon results.</p> </div>
       <div class="team-leads">
@@ -176,7 +182,7 @@
   <!-- Testimonials -->
 
 
-  <div class="testimonials ">
+  <div class="testimonials" id="testimonials">
       <h3> <span class="hero-title-highlight"> OVERHEARD FROM TRAVELS </span></h3>
    
       <div class="testimonial">
@@ -209,7 +215,7 @@
 
 
 <!--contact form-->
-  <div class="contact-form">
+  <div class="contact-form" id="contact-us">
     <h3 class="text-center text-purple">
         <span class="hero-title-highlight">CONTACT US</span>
     </h3>
@@ -230,35 +236,35 @@
 </div>
 
   <!-- Footer  -->
-   <div class="container2">
+   <div class="container2" id="contact-us">
   <div class="footer3"><ul>
-    <li><a href="#">HELP</a></li>
+    <li><a href="#"class="purple-link">HELP</a></li>
     <li><a href="#">Help Center</a></li>
     <li><a href="#">FAQs</a></li>
     <li><a href="#">Terms of Use</a></li>
   
 </ul></div>
   <div class="footer3"><ul>
-    <li><a href="#">ABOUT US</a></li>
-    <li><a href="#">Blog</a></li>
+    <li><a href="#" class="purple-link">ABOUT US</a></li>
+    <li><a href="#" >Blog</a></li>
     <li><a href="#">Careers</a></li>
    
 </ul></div>
   <div class="footer3"><ul>
-    <li><a href="#">DESTINATIONS</a></li>
+    <li><a href="#" class="purple-link">DESTINATIONS</a></li>
     <li><a href="#">Countries</a></li>
     <li><a href="#">Cities</a></li>
    
 </ul></div>
   <div class="footer3"><ul>
-    <li><a href="#">PARTNER WITH US</a></li>
+    <li><a href="#" class="purple-link">PARTNER WITH US</a></li>
     <li><a href="#">Properties</a></li>
     <li><a href="#">Affiliates</a></li>
    
 </ul></div>
   <div class="footer3"><ul>
     <li><a href="#"></a></li>
-    <li><a href="#">+94757302404 <br> +94767704923</a></li>
+    <li><a href="#" class="purple-link">+94757302404 <br> +94767704923</a></li>
     
     <li><a href="#">No - 13/1 <br> Naval & Maritime Academy <br> Sri Lanka Navy <br> Trincomalee <br> Sri Lanka <br></a></li>
     
@@ -282,3 +288,26 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-wkJ8MjMkYTB2v1TKN1liWNiMxylE+8Ryrlbi5UyxANr+c7Grd5aVKKw2YF0BGpUB" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const counters = document.querySelectorAll('.count');
+
+  counters.forEach(counter => {
+      const updateCount = () => {
+          const target = +counter.getAttribute('data-target');
+          const count = +counter.innerText;
+          const increment = target / 100; // Adjust increment for speed
+
+          if (count < target) {
+              counter.innerText = Math.ceil(count + increment);
+              setTimeout(updateCount, 10); // Adjust speed of increment
+          } else {
+              counter.innerText = target;
+          }
+      };
+
+      updateCount();
+  });
+});
+</script>

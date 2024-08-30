@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth; 
+}
 .navbar {
     background-color: black; 
 }
@@ -18,6 +21,50 @@
 .navbar-nav .nav-link.active {
     color: purple; 
 }
+
+/* navbar toggler button */
+.navbar-toggler {
+    background-color: rgb(3, 3, 3);
+    border: 2px solid black;
+    color: white; 
+    font-weight: bold;
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    transition: background-color 0.3s ease, border-color 0.3s ease; 
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    outline: none; 
+}
+
+/* icon inside the button */
+.navbar-toggler-icon {
+    background-image: none;
+    display: inline-block;
+    width: 24px; 
+    height: 2px;
+    background-color:purple;
+    position: relative; 
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    position: absolute;
+    width: 24px; 
+    height: 2px; 
+    background-color: purple; 
+}
+
+.navbar-toggler-icon::before {
+    top: -6px; 
+}
+
+.navbar-toggler-icon::after {
+    top: 6px;
+}
+
 
 
 center {
@@ -54,7 +101,7 @@ center {
   
   
       .main-img-slider{
-          height: 400px;
+          height: 500px;
       }
   
       .main-img-slider img{
@@ -69,7 +116,7 @@ center {
   }
   
   .carousel-inner img {
-    height: 400px;
+    height: 500px;
     object-fit: cover;
 }
 
@@ -113,6 +160,12 @@ center {
     font-size: 1.2em;
 }
 
+.team-member:hover img {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+}
+
+
 @media (max-width: 768px) {
     .team-leads {
         flex-direction: column;
@@ -134,7 +187,7 @@ center {
     }
 }
 
-          .stats {
+        .stats {
               background-color: #27314e;
               color: #fff;
               text-align: center;
@@ -233,25 +286,10 @@ center {
             border-radius: 5px; 
           }
 
-          .footer3 ul {
-            list-style-type: none; 
-            padding: 0; 
-            margin: 0; 
-        }
 
-        .footer3 li {
-            margin-bottom: 10px; 
-        }
-        
-        .footer3 a {
-            text-decoration: none; 
-            color:#ddd;
-        }
-        
-        .footer3 a:hover {
-            color:purple; 
-        }
+      
 
+        
           .container2 {
             display: flex;
             justify-content: space-between;
@@ -309,7 +347,18 @@ center {
         }
 
 
-/* footer */
+/* footer section */
+
+.purple-link {
+    color: purple; 
+}
+
+.footer3 ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+}
+
         @media (max-width: 768px) {
     .footer3 {
         width: 100%; /
@@ -318,6 +367,7 @@ center {
 
     .container2 {
         flex-direction: column; 
+        text-align: center;
     }
 }
 
